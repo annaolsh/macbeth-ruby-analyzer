@@ -8,15 +8,15 @@ class PlaysController < ApplicationController
   end
 
   def create
-    playObj = Play.create(plays_params)
-    redirect_to play_path(playObj)
+    @play = Play.create(plays_params)
+    redirect_to play_path(@play)
   end
 
   def show
-    playObj = Play.find(params[:id])
-    doc = playObj.fetch_xml
-    characters = playObj.get_character_hash
-    @play = {'characters'=> characters, 'name' => playObj.name}
+    @play = Play.find(params[:id])
+    doc = @play.fetch_xml
+    characters = @play.get_character_hash
+    @playObj = {'characters'=> characters, 'name' => @play.name}
   end
 
   private

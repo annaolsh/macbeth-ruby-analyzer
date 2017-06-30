@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= form_for @play do|f| %>
+      <%=f.label  :name %><br>
+      <%=f.text_field :name%><br>
+      <%=f.label  :play_url %><br>
+      <%=f.text_field :url%><br>
+    <br>
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>

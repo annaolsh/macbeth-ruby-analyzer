@@ -1,0 +1,13 @@
+<h1>number of words spoken by each character in <%= @play['name'] %></h1>
+<table>
+  <tr>
+    <th>character</th>
+    <th>words spoken</th>
+  </tr>
+  <% @play['characters'].each do |character| %>
+    <tr>
+      <td><%= character[0] %></td>
+      <td><%=character[1]['word_count']%></td>
+    </tr>
+  <% end %>
+</table>

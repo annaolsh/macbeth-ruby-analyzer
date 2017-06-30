@@ -1,2 +1,6 @@
 # README
-testing readme
+Domain model for saving history
+
+Play
+----------
+
